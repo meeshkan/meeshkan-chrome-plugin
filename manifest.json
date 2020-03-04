@@ -1,14 +1,9 @@
 {
-  "name": "Getting Started Example",
+  "name": "Meeshkan",
   "version": "1.0",
-  "description": "Build an Extension!",
-  "permissions": ["activeTab", "declarativeContent", "storage"],
+  "description": "Recording HTTP traffic for building mocks.",
   "options_page": "options.html",
-  "background": {
-    "scripts": ["background.js"],
-    "persistent": false
-  },
-  "page_action": {
+  "browser_action": {
     "default_popup": "popup.html",
     "default_icon": {
       "16": "images/get_started16.png",
