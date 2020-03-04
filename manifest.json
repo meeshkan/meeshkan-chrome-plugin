@@ -2,6 +2,7 @@
   "name": "Meeshkan",
   "version": "1.0",
   "description": "Recording HTTP traffic for building mocks.",
+  "permissions": ["downloads", "storage", "unlimitedStorage"],
   "options_page": "options.html",
   "browser_action": {
     "default_popup": "popup.html",

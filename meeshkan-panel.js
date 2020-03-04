@@ -25,6 +25,15 @@ chrome.devtools.network.onRequestFinished.addListener(request => {
       for (const [host, count] of Object.entries(countByHost)) {
         let li = document.createElement('li');
         li.textContent = host + ': ' + count;
+        li.onclick = () => {
+           var blob = new Blob(["array of", " parts of ", "text file"], {type: "application/x-ndjson"});
+           var url = URL.createObjectURL(blob);
+           chrome.downloads.download({
+             filename: host + '-recordings.jsonl',
+             url: url
+           });
+           console.log('clicked ' + host);
+        };
         ul.appendChild(li);
       }
 
